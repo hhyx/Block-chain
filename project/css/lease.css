@@ -1,0 +1,83 @@
+.leasewarrp, .tenantwarrp{
+	margin: auto 318px;
+    width: 700px;
+    padding: 30px 50px;
+    background: #FFFFFF;
+    overflow: hidden;
+    font-size: 18px;
+}
+
+.routinewarrp{
+	margin: auto auto;
+    width: 600px;
+    padding: 30px 50px;
+    background: #FFFFFF;
+    overflow: hidden;
+    font-size: 18px;
+}
+
+.Rentalparkingspace {
+	width:100%;
+	height:44px;
+	line-height: 44px;
+	font-size: 20px;
+	text-align: center;
+}
+.SimpleAuction{
+    width: 50%;
+    float:left;
+    height: auto;
+}
+.refuseauctionEnd {
+    width: 50%;
+    float:left;
+    height: auto;
+}
+.Bid{
+    width: 50%;
+    float:left;
+    height: auto;
+}
+.Withdraw {
+    width: 50%;
+    float:left;
+    height: auto;
+}
+
+.quitwarrp{
+    float: left;
+}
+.leasewarrp .tenantwarrp{
+    float: right;
+}
+
+#SimpleAuctionbutton, #Refusebutton, #AuctionEndbutton, #Bidbutton,
+#Withdrawbutton, #Balancebutton, #BalanceAddbutton, #ContractInformationbutton {
+	width:100px;
+	height:40px;
+	margin-top:10px;
+	font-size: 14px;
+}
+
+.lease-sub{
+	text-align: center;
+	list-style-type:none;
+}
+.lease-sub input{
+	margin-top:15px;
+    background: #45B549;
+    line-height: 35px;
+    width: auto;
+    color: #FFFFFF;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+}
+
+#Backbutton {
+	border:2px solid;
+	border-radius:25px;
+	display:inline-block;
+	line-height:40px;
+	text-decoration:none;
+}

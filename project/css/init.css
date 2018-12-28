@@ -1,0 +1,71 @@
+.loginwarrp{
+	margin: auto auto;
+    width: 400px;
+    padding: 30px 50px;
+    background: #FFFFFF;
+    overflow: hidden;
+    font-size: 18px;
+}
+.loginwarrp .Login {
+	width:100%;
+	height:44px;
+	line-height: 44px;
+	font-size: 20px;
+	text-align: center;
+	border-bottom:1px solid #ddd;
+}
+.col-lg-2 {
+	display: inline-block;
+	width: 100px;
+}
+.loginwarrp .login_form{
+	margin-top: 15px;
+}
+.loginwarrp .login_form .login-item{
+	padding: 2px 8px;
+	border:1px solid #dedede;
+	border-radius: 8px;
+	margin-top: 10px;
+	list-style-type:none;
+}
+
+.loginwarrp .Register{
+	width:100%;
+	height:44px;
+	line-height: 44px;
+	font-size: 20px;
+	text-align: center;
+	border-bottom:1px solid #ddd;
+}
+.loginwarrp .Registerpassword{
+	margin-top: 15px;
+}
+.loginwarrp .Registerpassword{
+	padding: 2px 8px;
+	border:1px solid #dedede;
+	border-radius: 8px;
+	margin-top: 10px;
+}
+.loginwarrp .login-sub{
+	text-align: center;
+	list-style-type:none;
+}
+.loginwarrp .login-sub input{
+	margin-top:15px;
+    background: #45B549;
+    line-height: 35px;
+    width: 150px;
+    color: #FFFFFF;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+}
+#Loginbutton, #Registerbutton {
+	width:100px;
+	height:40px;
+	margin-top:10px;
+	font-size: 18px;
+}
+#radio {
+	text-align:center;
+}

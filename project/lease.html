@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Rental parking space</title>
+
+    <script src="../node_modules/web3/dist/web3.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+    <script type="text/javascript" src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="css/init.css" />
+    <link rel="stylesheet" href="css/lease.css" />
+
+</head>
+<body>
+    <div class="container">
+
+        <div id="init" class="loginwarrp">
+            <div>
+                <div class="Login">Login</div>
+                <div class="login_form">
+                    <li class="login-item">
+                        <label for="name" class="col-lg-2 control-label">User Name</label>
+                        <input id="username" type="text" placeholder="username">
+                        <br />
+                    </li>
+                    <li class="login-item">
+                        <label for="name" class="col-lg-2 control-label">Password</label>
+                        <input id="Loginpassword" type="password" placeholder="password">
+                        <br />
+                    </li>
+                    <li class="login-sub">
+                        <button id="Loginbutton">Login</button>
+                    </li>
+                    <p id = "Login_content">Login:</p>
+                </div>
+            </div>
+            <div>
+                <div class="Register">Register</div>
+                <div class="login_form">
+                    <li class="login-item">
+                        <label for="name" class="col-lg-2 control-label">Password</label>
+                        <input id="Registerpassword" type="password" placeholder="password">
+                        <br />
+                    </li>
+                </div>
+
+                <li class="login-sub">
+                    <button id="Registerbutton">Register</button>
+                </li>
+                <p id = "Register_content">Register:</p>
+            </div>
+
+            <form id="radio" name="iForm" method="post" action="save.php">
+                <input type="radio" name="radio" value="lease" checked> lease
+                <input type="radio" name="radio" value="tenant"> tenant
+            </form>
+        </div>
+
+        <div class="warrp">
+            <p id = "address_content" style="display:none" >Your address:</p>
+
+            <div id="back" style="display:none" class="quitwarrp">
+                <button id="Backbutton">&nbsp;&nbsp;quit&nbsp;&nbsp;</button>
+            </div>
+            
+            <div id="lease" style="display:none" class="leasewarrp">
+                <div class="SimpleAuction">
+                    <div class="Rentalparkingspace">Rental parking space</div>
+
+                    <label for="name" class="col-lg-2 control-label">leaseTime</label>
+                    <input id="leaseTime" type="text">
+                    <br />
+                    <label for="name" class="col-lg-2 control-label">place</label>
+                    <input id="place" type="text">
+                    <br />
+                    <label for="name" class="col-lg-2 control-label">leaseStart</label>
+                    <input id="leaseStart" type="text">
+                    <br />
+                    <label for="name" class="col-lg-2 control-label">leaseEnd</label>
+                    <input id="leaseEnd" type="text">
+                    <br />
+
+                    <li class="lease-sub">
+                        <button id="SimpleAuctionbutton">Lease</button>
+                    </li>
+                    
+                    <p id = "Simple_Auction_content">Initialization: You can launch an auction.</p>
+                </div>
+
+                <div class="refuseauctionEnd">
+                    <label for="name" class="col-lg-2 control-label">refuse</label>
+                    <input id="refuse" type="text">
+                    <br />
+                    <li class="lease-sub">
+                        <button id="Refusebutton">refuse</button>   
+                    </li>
+                     
+                    <p id = "refuse_content">Refuse:</p>
+                
+                    <label for="name" class="col-lg-2 control-label">&nbsp;</label>
+                    <br />
+                    <li class="lease-sub">
+                        <button id="AuctionEndbutton">auction End</button> 
+                    </li>
+                       
+                    <p id = "auctionEnd_content">Auction End:</p>
+                </div>
+
+            </div>
+            
+            <div id="tenant" style="display:none" class="tenantwarrp">
+                <div class="Bid">
+                    <label for="name" class="col-lg-2 control-label">bid</label>
+                    <input id="bid" type="text">
+                    <br />
+
+                    <li class="lease-sub">
+                        <button id="Bidbutton">bid</button>  
+                    </li>
+                    <p id = "bid_content">Bid:</p>
+                </div>
+
+                <div class="Withdraw">
+                    <label for="name" class="col-lg-2 control-label">&nbsp;</label>
+                    <br />
+                    <li class="lease-sub">
+                        <button id="Withdrawbutton">withdraw</button>
+                    </li>                       
+                    <p id = "withdraw_content">Withdraw:</p>
+                </div>
+            </div>
+        </div>
+        <div id="routine" style="display:none" class="routinewarrp">
+            <div>
+                <button id="Balancebutton">get balance</button>    
+                <p id = "balance_content">Balance:</p>
+            </div>
+
+            <div>
+                <button id="BalanceAddbutton">add balance</button>    
+                <p id = "balanceadd_content">Balance Add:</p>
+            </div>
+
+            <button id="ContractInformationbutton">Get contract information</button>    
+
+            <p id = "beneficiary_content">No contract has been established yet.</p>
+
+            <p id = "leaseTime_content"></p>
+
+            <p id = "leaseStart_content"></p>
+
+            <p id = "leaseEnd_content"></p>
+
+            <p id = "place_content"></p>
+
+            <p id = "tenant_content"></p>
+
+            <p id = "tenantBid_content"></p>
+
+        </div>
+
+    </div>
+
+    <script type="text/javascript" src="js/contract.js"></script>
+    <script type="text/javascript" src="js/lease.js"></script>
+
+</body>
+</html>
