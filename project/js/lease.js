@@ -127,16 +127,16 @@ $("#SimpleAuctionbutton").click(function() {
 
 $("#Balancebutton").click(function() {
     var balance = web3.fromWei(web3.eth.getBalance(account));
-    console.log(balance + "wei");
-    $("#balance_content").text("Balance: " + balance.toString() + " wei");
+    console.log(balance + "Ether");
+    $("#balance_content").text("Balance: " + balance.toString() + " Ether");
 })
 
 $("#BalanceAddbutton").click(function() {
     var balance = web3.toWei(10, 'ether');
     web3.personal.unlockAccount(web3.eth.accounts[0], "123", 100);
     web3.eth.sendTransaction({from:web3.eth.accounts[0], to:account, value:balance});
-    console.log(web3.fromWei(balance) + "wei");
-    $("#balanceadd_content").text("Balance Add: " + web3.fromWei(balance).toString() + " wei");
+    console.log(web3.fromWei(balance) + "Ether");
+    $("#balanceadd_content").text("Balance Add: " + web3.fromWei(balance).toString() + " Ether");
 })
 
 $("#ContractInformationbutton").click(function() {
